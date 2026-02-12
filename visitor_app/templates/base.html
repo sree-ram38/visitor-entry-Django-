@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Visitor Entry System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body style="background-color:rgb(211, 132, 146);">
+
+    <nav style="background-color: rgb(255, 177, 177);" class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="/">Visitor Entry</a>
+            <div>
+                <a class="btn btn-outline-dark me-2" href="/">Home</a>
+                <a class="btn btn-outline-dark me-2" href="/entry/">Entry</a>
+                <a class="btn btn-outline-dark me-2" href="/list/">Visitor List</a>
+                <a class="btn btn-outline-dark" href="/summary/">Report</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-dismissible fade show" role="alert">{{ message }}</div>
+        {% endfor %}
+        {% endif %}
+
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <footer style="background-color:  rgb(255, 177, 177);" class="text-center">
+        <hr>
+        <p style="margin-bottom: 0;padding-bottom: 15px;">© 2026 Visitor Entry System</p>
+    </footer>
+
+</body>
+
+</html> 

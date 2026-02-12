@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow">
+            <div style="background-color: rgb(163, 75, 75);" class="card-header text-white">
+                <h4 class="mb-0">Visitor Entry</h4>
+            </div>
+            <div class="card-body">
+
+                
+
+                <form method="post">
+                    {% csrf_token %}
+
+                    <div class="mb-3">
+                        <label class="form-label">Visitor Name</label>
+                        <input type="text" name="name" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Place</label>
+                        <input type="text" name="place" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Category</label>
+                        <select name="category" class="form-select">
+                            <option value="" selected disabled>Select Category</option>
+                            <option value="Student">Student</option>
+                            <option value="Employee">Employee</option>
+                            <option value="Un-Employee">Un-Employee</option>
+                        </select>
+                    </div>
+
+                    <button style="margin-left: 185px;" class="btn btn-success w-30 ">Submit</button>
+                    <a class="btn btn-success " href="/">Home</a>
+                </form>
+                
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+
+
+{#<h2>Visitor Entry</h2>
+
+{% if error %}
+<p style="color:red">{{ error }}</p>
+{% endif %}
+
+<form method="post">
+{% csrf_token %}
+Name: <input type="text" name="name"><br><br>
+Place: <input type="text" name="place"><br><br>
+Category:
+<select name="category">
+    <option value="S">Student</option>
+    <option value="E">Employee</option>
+    <option value="U">Un-Employee</option>
+</select><br><br>
+
+<button type="submit">Submit</button>
+</form>#}

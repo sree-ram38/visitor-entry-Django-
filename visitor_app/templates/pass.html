@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+
+        <div class="card shadow-lg border-0">
+            <div class="card-header bg-dark text-white text-center">
+                <h4 class="mb-0">ENTRY PASS</h4>
+            </div>
+
+            <div class="card-body text-center">
+                <h5 class="text-muted mb-3">DATA SCIENCE IN TAMIL</h5>
+                <p class="text-muted">Chennai</p>
+
+                <hr>
+
+                <table class="table table-borderless text-start">
+                    <tr>
+                        <th>Pass No</th>
+                        <td>: {{ p.id }}</td>
+                    </tr>
+                    <tr>
+                        <th>Name</th>
+                        <td>: {{ p.name }}</td>
+                    </tr>
+                    <tr>
+                        <th>Place</th>
+                        <td>: {{ p.place }}</td>
+                    </tr>
+                    <tr>
+                        <th>Category</th>
+                        <td>: {{ p.category }}</td>
+                    </tr>
+                    <tr>
+                        <th>Entry Time</th>
+                        <td>: {{ p.created_at|date:"d M Y" }}</td>
+                    </tr>
+                </table>
+
+                <hr>
+            </div>
+        </div>
+            <div class="d-flex justify-content-end">
+        <a class="btn btn-success me-2 mt-5" href="/">Home</a>
+    </div>
+
+    </div>
+
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+{#<h2>ENTRY PASS</h2>
+<hr>
+Pass No: {{ p.id }} <br>
+Name: {{ p.name }} <br>
+Place: {{ p.place }} <br>
+Category: {{ p.category }} <br>
+<hr>
+<a href="/">Back to Menu</a>#}
+{#<div class="d-flex justify-content-between">
+    <a href="/" class="btn btn-secondary">⬅ Back</a>
+    <button onclick="window.print()" class="btn btn-primary">🖨 Print</button>
+</div>#}

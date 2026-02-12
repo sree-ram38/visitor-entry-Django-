@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3 class="mb-3">Visitor List</h3>
+
+<div class="card shadow">
+    <div class="card-body">
+        <table class="table table-bordered table-hover text-center">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Place</th>
+                    <th>Category</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for v in visitors %}
+                <tr>
+                    <td>{{ v.id }}</td>
+                    <td>{{ v.name }}</td>
+                    <td>{{ v.place }}</td>
+                    <td>{{ v.category }}</td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="4">No visitors found</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="d-flex justify-content-end">
+            <a class="btn btn-success justify-content-end " href="/">Home</a>
+        </div>
+        
+    </div>
+</div>
+{% endblock %}
+
+
+
+
+
+
+{#
+<h2>Visitor List</h2>
+
+<table border="1">
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Place</th>
+    <th>Category</th>
+</tr>
+
+{% for v in visitors %}
+<tr>
+    <td>{{ v.id }}</td>
+    <td>{{ v.name }}</td>
+    <td>{{ v.place }}</td>
+    <td>{{ v.category }}</td>
+</tr>
+{% endfor %}
+</table>
+#}
