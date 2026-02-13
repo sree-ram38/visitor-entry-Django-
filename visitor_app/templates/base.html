@@ -34,9 +34,12 @@
 
     <footer style="background-color:  rgb(255, 177, 177);" class="text-center">
         <hr>
-        <p style="margin-bottom: 0;padding-bottom: 15px;">© 2026 Visitor Entry System</p>
+        <p style="margin-bottom: 0;padding-bottom: 15px;">© <span id="year"></span> Visitor Entry System</p>
     </footer>
 
-</body>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 
+</body>
 </html> 
